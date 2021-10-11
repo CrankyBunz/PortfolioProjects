@@ -1,4 +1,5 @@
 -- Covid-19 Data Exploration using data from https://ourworldindata.org/covid-deaths
+-- Tableau Dashboard can be found at https://public.tableau.com/app/profile/riley.smith3695/viz/Covid-19Dashboard_16339902649500/Dashboard1
 
 SELECT * 
 FROM PortfolioProject..CovidDeaths
