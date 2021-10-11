@@ -87,7 +87,7 @@ RollingTotal float
 )
 
 INSERT INTO UnitedStatesVaccinations
-	SELECT deaths. continent, deaths.location, deaths.date, deaths.population, CAST(vaccines.new_vaccinations as float), SUM(CAST(vaccines.new_vaccinations as float)) OVER (Partition by deaths.location ORDER BY deaths.location, deaths.date) as RollingTotal
+	SELECT deaths.continent, deaths.location, deaths.date, deaths.population, CAST(vaccines.new_vaccinations as float), SUM(CAST(vaccines.new_vaccinations as float)) OVER (Partition by deaths.location ORDER BY deaths.location, deaths.date) as RollingTotal
 	FROM PortfolioProject..CovidDeaths as deaths JOIN PortfolioProject..CovidVaccinations as vaccines on deaths.location = vaccines.location AND deaths.date = vaccines.date
 	WHERE deaths.location = 'United states'
 
