@@ -1,3 +1,5 @@
+-- Covid-19 Data Exploration using data from https://ourworldindata.org/covid-deaths
+
 SELECT * 
 FROM PortfolioProject..CovidDeaths
 
